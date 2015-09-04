@@ -179,8 +179,9 @@ $(function(){
 			outStr = outStr + String(numNum) + " = " + result;
 			// put result in box
 			$('#output').val(outStr);
-			msgStr = '<p>'+outStr+"</p>";
-			// $(.msg).append(msgStr);
+			msgStr = "<p>"+outStr+"</p>";
+			alert(msgStr);
+			$('#msg').append(msgStr);
 			$('#input').val("");
 			state = 'add';
 			outStr = "";
