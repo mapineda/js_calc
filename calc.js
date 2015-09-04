@@ -27,3 +27,17 @@ function validate (userString){
 
 	// return false if not valid or return number if valid
 }
+
+// Add event listeners
+$('#plus').click(function()){
+	var strNum, numNum;
+	// grab number from input box
+	strNum = $('#display').val();
+	numNum = parseInit (strNum);
+	// valadate data for number and NaN 
+		if ((typeof numNum === 'number') && (numNum === numNum)){
+			alert('You entered' + numNum)  ;
+		} else { 
+			alert('Please enter a valid numNum.');
+		};
+}
