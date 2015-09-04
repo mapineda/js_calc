@@ -6,6 +6,7 @@
 
 
 // Main calculation function object:
+
 $(function(){
 	// var calc = {
 
@@ -44,3 +45,42 @@ $(function(){
 			};
 	});
 });
+
+
+// var calc {
+
+// 	function add (x,y){
+// 		return (x+y);
+// 	},
+
+// 	function subtract (x,y){
+// 		return (x-y);
+// 	}
+
+// 	// Add more functions here
+// }
+
+// function validate (userString){
+// 	// change sting to number
+	
+// 	parseInit (userString);
+// 	// do validation
+
+// 	// return false if not valid or return number if valid
+// }
+
+// // Add event listeners
+// $('#plus').click(function()){
+// 	var strNum, numNum;
+// 	// grab number from input box
+// 	strNum = $('#display').val();
+// 	numNum = parseInit (strNum);
+// 	// valadate data for number and NaN 
+// 		if ((typeof numNum === 'number') && (numNum === numNum)){
+// 			alert('You entered' + numNum)  ;
+// 		} else { 
+// 			alert('Please enter a valid numNum.');
+// 		};
+// }
+
+
