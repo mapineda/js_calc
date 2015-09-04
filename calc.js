@@ -11,7 +11,7 @@ $(function(){
 	
 	// Add event listeners
 	var strNum, numNum;
-	var outString = "";
+	var outStr = "";
 	var result = 0;
 	var state = 'add';
 	// get the input field jQuery object
@@ -45,6 +45,43 @@ $(function(){
 		$('#input').focus();
 	});
 
+	$('#a2').click(function(){
+		input.val(input.val() + "2" );
+		$('#input').focus();
+	});
+	$('#a3').click(function(){
+		input.val(input.val() + "3" );
+		$('#input').focus();
+	});
+	$('#a4').click(function(){
+		input.val(input.val() + "4" );
+		$('#input').focus();
+	});
+	$('#a5').click(function(){
+		input.val(input.val() + "5" );
+		$('#input').focus();
+	});
+	$('#a6').click(function(){
+		input.val(input.val() + "6" );
+		$('#input').focus();
+	});
+	$('#a7').click(function(){
+		input.val(input.val() + "7" );
+		$('#input').focus();
+	});
+	$('#a8').click(function(){
+		input.val(input.val() + "8" );
+		$('#input').focus();
+	});
+	$('#a9').click(function(){
+		input.val(input.val() + "9" );
+		$('#input').focus();
+	});
+	$('#a0').click(function(){
+		input.val(input.val() + "0" );
+		$('#input').focus();
+	});
+
 	$('#add').click(function(){
 		// grab number from input box
 		strNum = $('#input').val();
@@ -53,9 +90,9 @@ $(function(){
 		if ((typeof numNum === 'number') && (numNum === numNum)){
 			// make our output string
 			updateResult();
-			outString = outString + String(numNum) + " + ";
+			outStr = outStr + String(numNum) + " + ";
 			// put result in box
-			$('#output').val(outString)
+			$('#output').val(outStr)
 			// clear the input box;
 			$('#input').val("");
 			state = 'add';
@@ -74,9 +111,9 @@ $(function(){
 		if ((typeof numNum === 'number') && (numNum === numNum)){
 			// make our output string
 			updateResult();
-			outString = outString + String(numNum) + " - ";
+			outStr = outStr + String(numNum) + " - ";
 			// put result in box
-			$('#output').val(outString)
+			$('#output').val(outStr)
 			// clear the input box;
 			$('#input').val("");
 			state = '-';
@@ -95,9 +132,9 @@ $(function(){
 		if ((typeof numNum === 'number') && (numNum === numNum)){
 			// make our output string
 			updateResult();
-			outString = "("+outString + String(numNum) + ") / ";
+			outStr = "("+outStr + String(numNum) + ") / ";
 			// put result in box
-			$('#output').val(outString)
+			$('#output').val(outStr)
 			// clear the input box;
 			$('#input').val("");
 			state = 'divi';
@@ -116,9 +153,9 @@ $(function(){
 		if ((typeof numNum === 'number') && (numNum === numNum)){
 			// make our output string
 			updateResult();
-			outString = "("+ outString + String(numNum) + ") * ";
+			outStr = "("+ outStr + String(numNum) + ") * ";
 			// put result in box
-			$('#output').val(outString)
+			$('#output').val(outStr)
 			// clear the input box;
 			$('#input').val("");
 			state = 'mult';
@@ -130,19 +167,23 @@ $(function(){
 	});
 
 	$('#enter').click(function(){
+		var msgStr;
 		// grab number from input box
 		strNum = $('#input').val();
 		numNum = parseInt (strNum);
+
 		// valadate data for number and NaN 
 		if ((typeof numNum === 'number') && (numNum === numNum)){
 			// make our output string
 			updateResult();
-			outString = outString + String(numNum) + " = " + result;
+			outStr = outStr + String(numNum) + " = " + result;
 			// put result in box
-			$('#output').val(outString);
+			$('#output').val(outStr);
+			msgStr = '<p>'+outStr+"</p>";
+			// $(.msg).append(msgStr);
 			$('#input').val("");
 			state = 'add';
-			outString = "";
+			outStr = "";
 			result = 0;
 		} else { 
 			alert('Please enter a valid numNum.');
