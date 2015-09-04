@@ -180,7 +180,7 @@ $(function(){
 			// put result in box
 			$('#output').val(outStr);
 			msgStr = "<p>"+outStr+"</p>";
-			alert(msgStr);
+			// alert(msgStr);
 			$('#msg').append(msgStr);
 			$('#input').val("");
 			state = 'add';
