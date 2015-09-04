@@ -9,29 +9,47 @@
 	</head>
 	<body>
 		<div class="container">
-				<!--FORM -->
-			<div class="display">
+		<!--Main Container -->	
+			<div class="box">
+			<!--Calculator-->
+			<div class="display" id="d">
 				<input type="text" >
 			</div>	
-			<div class="btn-wrapper">
-		<!--operator buttons -->
-				<div class="buttons">
-					<input type="button" value="+">
-					<input type="button" value="-">
-				</div>
-			<!--CALCULATE BUTTON -->
-				<div class="buttons">
+			<!--operator buttons -->
+				<div class="keys">
+					<p><input type="button" value="1" onclick= v("1")>
+					<input type="button" value="2" onclick= v("2")>
+					<input type="button" value="3" onclick= v("3")>
+					<input type="button" value="+" onclick= v("+")>
+				</p>
+				<p>	<input type="button" value="4" onclick= v("4")>
+					<input type="button" value="5" onclick= v("5")>
+					<input type="button" value="6" onclick= v("6")>
+					<input type="button" value="-" onclick =v("-")>
+				</p>
+				<p>	
+					<input type="button" value="7" onclick= v("7")>
+					<input type="button" value="8" onclick= v("8")>
+					<input type="button" value="9" onclick= v("9")>
+					<input type="button" value="*" onclick= v("*")>
+				</p>	
+				<p>	
+					<input type="button" value="0" onclick= v("0")>
+					<input type="button" value="%" onclick= v("%")>
+				</p>	
+				<p>
 					<input type="button" value="Enter">
-					
-				</div>
-			<!-- RESET -->
-				<div class="buttons">
 					<input type="reset">
+				</p>	
 				</div>
 
-			</div>	
-
-		</div>	
+			</div>
+				<div class="box">
+					<div class="calc-result">
+						<input type="text" value="Result">
+					</div>
+				</div>	
+		</div>		
 	</body>
 	<script type="text/javascript" src="calc.js"></script>
 </html>
