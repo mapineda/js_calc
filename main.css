@@ -1,17 +1,27 @@
+body {
+	background: cover;
+	background-image: url(http://www.eyescreamlabs.com/wp-content/uploads/2014/06/blackboard.jpg);
+	width: 100%;
+}
+
+h2 {
+	color: #fff;
+}
+
 .display
 {
 background-color:#222;
 width:240px;
 /*position:relative;*/
 left:15px;
-top:20px;
+top:10px;
 height:40px;
 }
 .display input
 {
-/*position:relative;*/
-left:2px;
-top:2px;
+position:relative;
+left:6px;
+top:8px;
 height:35px;
 color:black;
 background-color:#bccd95;
@@ -19,11 +29,16 @@ font-size:21px;
 text-align:right;
 } 
 
+.calc-container {
+	height: 400px;
+	width: 300px;
+}
+
 .box {
 	display: inline-block;
-	background-color: green;
-	width:300px;	
-	/*position:relative;*/
+	background-color: black;
+	position:relative;
+	border-radius: 10px;
 }
 
 .keys
@@ -88,7 +103,24 @@ border-bottom:#303030 2px solid;
 border-top:black 2px solid;
 border-bottom:FF9933 2px solid;
 }
-p
-{
+p {
 line-height:10px;
+}
+
+textarea {
+    display: block;
+    padding: 10px;
+    margin: 10px 0 0 -10px;
+    width: 340px;
+    height: 360px;
+    resize: none;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+#rslt {
+	text-align: left;
+	position: relative;
+	top: 65px;
+	left: 20px;
 }
