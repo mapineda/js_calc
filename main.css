@@ -14,22 +14,14 @@ background-color:#222;
 width:240px;
 /*position:relative;*/
 left:15px;
-<<<<<<< HEAD
-top:40px;
-=======
 top:10px;
->>>>>>> 1973b9a0ce511753e3be633843a49a8900203dd7
 height:40px;
 }
 .display input
 {
 position:relative;
 left:6px;
-<<<<<<< HEAD
-top:6px;
-=======
 top:8px;
->>>>>>> 1973b9a0ce511753e3be633843a49a8900203dd7
 height:35px;
 color:black;
 background-color:#bccd95;
