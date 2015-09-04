@@ -31,22 +31,114 @@ $(function(){
 	// }
 
 	// Add event listeners
-	$('#enter').click(function(){
-		var strNum, numNum;
+	var strNum, numNum;
+	var outString = "";
+	var result = 0;
+	var state = 'add';
+
+	function updateResult () {
+		switch (state) {
+				
+			case 'add':
+				result += numNum;
+				break;
+
+			case '-':
+				result -= numNum;
+				break;
+
+			case 'div':
+				result /= numNum;
+
+		}
+
+	}
+	
+	$('#add').click(function(){
 		// grab number from input box
 		strNum = $('#input').val();
-		console.log (strNum);
 		numNum = parseInt (strNum);
 		// valadate data for number and NaN 
-			if ((typeof numNum === 'number') && (numNum === numNum)){
-				alert('You entered' + numNum)  ;
-			} else { 
-				alert('Please enter a valid numNum.');
-			};
+		if ((typeof numNum === 'number') && (numNum === numNum)){
+			// make our output string
+			updateResult();
+			outString = outString + String(numNum) + " + ";
+			// put result in box
+			$('#output').val(outString)
+			// clear the input box;
+			$('#input').val("");
+			state = 'add';
+
+		} else { 
+			alert('Please enter a valid numNum.');
+		};
+			$('#input').focus();
 	});
+
+	$('#-').click(function(){
+		// grab number from input box
+		strNum = $('#input').val();
+		numNum = parseInt (strNum);
+		// valadate data for number and NaN 
+		if ((typeof numNum === 'number') && (numNum === numNum)){
+			// make our output string
+			updateResult();
+			outString = outString + String(numNum) + " - ";
+			// put result in box
+			$('#output').val(outString)
+			// clear the input box;
+			$('#input').val("");
+			state = '-';
+
+		} else { 
+			alert('Please enter a valid numNum.');
+		};
+			$('#input').focus();
+	});
+
+	$('#div').click(function(){
+		// grab number from input box
+		strNum = $('#input').val();
+		numNum = parseInt (strNum);
+		// valadate data for number and NaN 
+		if ((typeof numNum === 'number') && (numNum === numNum)){
+			// make our output string
+			updateResult();
+			outString = outString + String(numNum) + " / ";
+			// put result in box
+			$('#output').val(outString)
+			// clear the input box;
+			$('#input').val("");
+			state = 'div';
+
+		} else { 
+			alert('Please enter a valid numNum.');
+		};
+			$('#input').focus();
+	});
+
+	$('#enter').click(function(){
+		// grab number from input box
+		strNum = $('#input').val();
+		numNum = parseInt (strNum);
+		// valadate data for number and NaN 
+		if ((typeof numNum === 'number') && (numNum === numNum)){
+			// make our output string
+			updateResult();
+			outString = outString + String(numNum) + " = " + result;
+			// put result in box
+			$('#output').val(outString);
+			$('#input').val("");
+			state = 'add';
+			outString = "";
+			result = 0;
+		} else { 
+			alert('Please enter a valid numNum.');
+		};
+			$('#input').focus();
+	});
+
 });
-
-
 // var calc {
 
 // 	function add (x,y){
