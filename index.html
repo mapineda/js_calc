@@ -16,10 +16,11 @@
 			</header>
 				<div class="box">
 			<!--Calculator-->
-					<div class="calc-container">
-					<div class="display pull-center" id="d">
-						<input type="text" >
-					</div>	
+			<div class="calc-container">
+			<div class="display" id="d">
+				<input type="number" id='input'>
+			</div>	
+
 			<!--operator buttons -->
 					<div class="keys">
 				<p>
@@ -44,15 +45,16 @@
 				</p>	
 				<p>	
 					<input id="a0"type="button" value="0" class="button black">
-					<input id="div"type="button" value="/" class="button pink">
+					<input id="divi"type="button" value="/" class="button pink">
 				
 				</p>	
 				<p>
 					<input type="reset" class="button gray">
+
 					<input id="enter" type="button" value="Enter" class="button gray">	
 				</p>
 				<p> 
-					<input id="rslt" type="text" value="Result">
+					<input id="output" type="text" value="Result">
 				</p>	
 					</div>
 					</div>
@@ -64,7 +66,6 @@
 				
 			</div>	
 		</div>	
-
 	</body>
-	<script type="text/javascript" src="calc.js"></script>
+	<script src="calc.js"></script>
 </html>
